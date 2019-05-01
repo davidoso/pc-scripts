@@ -1,0 +1,100 @@
+// Columnas.- Superficie has y Propietario anterior
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "div",
+    "attributes": {
+        "class": "=if(@currentField == '', 'sp-field-severity--warning', '') + ' ms-fontColor-neutralSecondary'"
+    },
+    "children": [
+        {
+            "elmType": "span",
+            "style": {
+                "display": "inline-block",
+                "padding": "=if(@currentField == '', '0 0.1rem', '0 0.25rem')"
+            },
+            "attributes": {
+                "iconName": "=if(@currentField == '', 'Error', '')"
+            }
+        },
+        {
+            "elmType": "span",
+            "txtContent": "=if(@currentField == '', 'Sin información', @currentField)"
+        }
+    ]
+}
+
+
+// Columnas.- Predio/lote y Número: diferentes maneras de desplegar NA
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "div",
+    "txtContent": "=if(@currentField == '', 'NA', if(@currentField == 'N.A.', 'NA', if(@currentField == 'na', 'NA', if(@currentField == 'n.a.', 'NA', @currentField))))",
+    "style": {
+        "text-transform": "uppercase"
+    }
+}
+
+
+// Columnas.- Descripción y Propietario actual: texto en mayúsculas
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "div",
+    "txtContent": "@currentField",
+    "style": {
+        "text-transform": "uppercase"
+    }
+}
+
+
+// Columna.- Plano: etiqueta <a> con <img> de miniatura abrir en una pestaña nueva la imagen
+// Fórmula (campo calculado): =CONCATENATE("https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Shared%20documents/",Zona,"/",[Código actual],".jpg")
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "a",
+    "attributes": {
+        "target": "_blank",
+        "href": "=@currentField"
+    },
+    "children": [
+        {
+            "elmType": "img",
+            "attributes": {
+                "src": "@currentField",
+                "alt": "='No existe la imagen ' + [$Zona] + '/' + [$C_x00f3_digo_x0020_actual]",
+                "title": "[$C_x00f3_digo_x0020_actual]"
+            },
+            "style": {
+                "position": "relative",
+                "width": "130px",
+                "height": "auto",
+                "text-align": "right",
+                "margin-top": "0%"
+            }
+        }
+    ]
+}
+
+
+// Columna.- Link a plano: etiqueta <a> con botón con texto para abrir en una pestaña nueva la imagen
+// Fórmula (campo calculado): =Plano
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "a",
+    "attributes": {
+        "target": "_blank",
+        "href": "=@currentField",
+        "title": "[$C_x00f3_digo_x0020_actual]"
+    },
+    "children": [
+        {
+            "elmType": "button",
+            "style": {
+                "border": "none",
+                "background-color": "transparent",
+                "color": "#0078d7",
+                "cursor": "pointer"
+            },
+            "txtContent": "Plano"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+Peña Colorada SharePoint main page:
+https://pcolorada.sharepoint.com/_layouts/15/sharepoint.aspx
+
+
+My document library (Planos):
+https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Shared Documents/Forms/Ver planos.aspx
+https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Shared%20documents (redirects to Ver planos.aspx)
+
+
+My custom list (Datos Generales):
+https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Lists/Datos%20Generales/Ver%20Grupos%20por%20zona.aspx
+https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Lists/Datos%20Generales (redirects to Ver Grupos por zona.aspx)
+
+
+Link examples to share a document file or folder or an item list:
+https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Shared%20documents/Mina/Mina (2).jpg
+https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Shared%20documents/El Poblado/El Poblado (4).jpg
+https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Shared%20documents/Manzanillo/Peco-Manzanillo.jpg
+https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Lists/Datos%20Generales/DispForm.aspx?ID=50
