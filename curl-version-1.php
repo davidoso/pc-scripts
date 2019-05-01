@@ -2,8 +2,7 @@
     // Obtener array de la versión de curl
     $version = curl_version();
 
-    // Estos son los campos que se pueden usar para
-    // comprobar ciertas caracerísticas para esta versión de curl
+    // Estos son los campos que se pueden usar para comprobar ciertas caracerísticas para la versión de curl
     $bitfields = Array(
         'CURL_VERSION_IPV6',
         'CURL_VERSION_KERBEROS4',

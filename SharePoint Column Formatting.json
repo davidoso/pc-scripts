@@ -46,7 +46,7 @@
 }
 
 
-// Columna.- Plano: etiqueta <a> con <img> de miniatura abrir en una pestaña nueva la imagen
+// Columna.- Plano: etiqueta <a> con <img> de miniatura para abrir en una pestaña nueva la imagen
 // Fórmula (campo calculado): =CONCATENATE("https://pcolorada.sharepoint.com/sites/PlanosHistoricosPeco/Shared%20documents/",Zona,"/",[Código actual],".jpg")
 {
     "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
